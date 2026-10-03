@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Jersey+15&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg,#0f172a,#111827);
+}
+
+footer{
+    margin-top: auto;
+    width: 100%;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #07151C ;
+    backdrop-filter: blur(10px);
+    color: antiquewhite;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+}
+
+footer .rights{
+    color: #D9D9D9;
+    font-size: 14px;
+}
+
+@media ( max-width:428px) and (min-height : 600px) {
+nav{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+     width: 100%;
+    height: 90px;
+    background: rgba(255,255,255,0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    color:  antiquewhite;
+    font-family: 'inter';
+}
+.nav-links{
+    display:none;
+    list-style:none;
+    gap:20px;
+}
+.nav-links a{
+    color:  antiquewhite;
+    text-decoration:none;
+    
+}
+nav h1{
+    padding: 25px;
+    transition: transform 0.5s ease;
+}
+nav h1:hover{
+transform: scale(1.05);
+}
+#menuBtn{
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    z-index: 99999;
+    cursor: pointer;
+    transition: all .3s ease;
+    color:  antiquewhite;
+}
+#menuBtn.active{
+    transform: rotate(90deg);
+}
+.sidebar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction:column ;
+    top: 0;
+    right: -250px;
+    width: 150px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    color:  antiquewhite;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+}
+.sidebar.active {
+    right: 0;
+}
+.sidebar a {
+    display: block;
+    padding: 30px;
+    color:  antiquewhite;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+    font-size: 32px;
+    font-family: 'Jersey 10';
+}
+.sidebar :nth-child(1){
+    margin-top: 50px;
+}
+.sidebar a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+.title{
+    width: 100%;
+    padding-top: 30px;
+}
+.title h1{
+    color: white;
+    font-size: 40px;
+    font-family: Instrument Sans;
+    text-align: center;
+    letter-spacing: 10%;
+}
+.container{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    place-items: center;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap:10px;
+}
+.container div{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 20px;
+    background-color: #6BE6FF;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.container div:hover{
+    transform: scale(1.05);
+}
+.container div h6{
+    margin-top: 48px;
+    font-size: 28px;
+    color: #F8F4EC;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+}
+.fa{
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+.container div a{
+    color: black;
+    font-size: 50px;
+}
+.phone{
+    padding-top: 100px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+}
+.phone i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    background-color: #6BE6FF;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-left: 30px;
+}
+
+.phone p{
+    font-size: 24px;
+    color: #F8F4EC;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+    padding-right: 20px;
+}
+.behance{
+    padding-top: 100px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom:50px
+}
+.behance h3{
+    font-size: 24px;
+    color: #6BE6FF;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+    padding-left: 20px;
+}
+.behance p{
+    font-size: 24px;
+    color: #F8F4EC;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+    padding-right: 20px;
+}
+}
+@media (min-width:429px){
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+     width: 100%;
+    height: 90px;
+    background: rgba(255,255,255,0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    color:  antiquewhite;
+}
+nav h1{
+    padding: 25px;
+    transition: all 0.5s ease;
+    cursor: default;
+    font-family: 'inter';
+}
+nav h1:hover{
+    transform: scale(1.15);
+}
+#menuBtn{
+    display:none;
+}
+.sidebar{
+    display:none;
+}
+.nav-links{
+    display:flex;
+    gap: 20px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links li a{
+    display: block;
+    color:  antiquewhite;
+    font-size: 32px;
+    font-family: 'Jersey 10';
+    text-decoration: none;
+    padding-right: 50px ;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.nav-links li a:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+.title{
+    width: 100%;
+    padding-top: 30px;
+}
+.title h1{
+    color: white;
+    font-size: 40px;
+    font-family: Instrument Sans;
+    text-align: center;
+    letter-spacing: 10%;
+}
+.container{
+    padding-top: 100px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    gap:100px;
+}
+.container div{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 20px;
+    background-color: #6BE6FF;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.container div:hover{
+    transform: scale(1.05);
+}
+.container div h6{
+    margin-top: 100px;
+    font-size: 28px;
+    color: #F8F4EC;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+}
+.fa{
+    padding-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+.container div a{
+    color: black;
+    font-size: 100px;
+}
+.phone{
+    padding-top: 100px;
+    padding-left: 80px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.phone i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+    background-color: #6BE6FF;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+
+.phone p{
+    font-size:32px;
+    color: #F8F4EC;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+    padding-right: 20px;
+}
+.behance{
+    padding-top: 100px;
+    padding-left: 80px;
+    gap: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.behance h3{
+    font-size: 48px;
+    color: #6BE6FF;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+    padding-left: 20px;
+}
+.behance p{
+    font-size: 32px;
+    color: #F8F4EC;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 10%;
+    text-shadow: 2px 4px 6px #975E5E;
+    padding-right: 20px;
+}
+}
